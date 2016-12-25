@@ -1,0 +1,20 @@
+#export initialstate_bucket_key='1234'
+#export initialstate_access_key='1234'
+"picorecfg":
+    mqtt:
+      server: '192.168.1.122'
+      user: 'user'
+      pwd: 'pwd'
+      port: 8883
+      client_id: 'picore'
+    timezone : "Europe/Kiev"
+    default_bright : 15
+    sleep:
+      from: "23:30"
+      to: "7:00"
+      night_bright: 0
+    THINGSPEAK_KEY : "123456"
+    SLACK_BOT_NAME : "1234"
+    SLACK_BOT_TOKEN : "xoxb-1234"
+    SLACK_BOT_ID : "1234"
+    SLACK_POST_IN : "1234"
