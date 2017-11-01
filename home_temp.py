@@ -22,5 +22,5 @@ if __name__ == '__main__':
 
     print "{} \nPressure:{}. Temp:{}. Humidity:{}\n".format(c_time, hectopascals, degrees, humidity)
 
-    thingspeak_key = os.environ.get("THINGSPEAK_KEY")
-    requests.get('https://api.thingspeak.com/update?api_key={}&field1={}&field2={}&field3={}'.format(thingspeak_key,degrees,hectopascals,humidity))
+#    thingspeak_key = os.environ.get("THINGSPEAK_KEY")
+#    requests.get('https://api.thingspeak.com/update?api_key={}&field1={}&field2={}&field3={}'.format(thingspeak_key,degrees,hectopascals,humidity))
