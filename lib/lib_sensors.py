@@ -52,7 +52,7 @@ class HTU21D(object):
         self.CMD_SOFT_RESET = b"\xFE"
         self.dev = i2c_base.i2c(self.HTU21D_ADDR, 1)  # HTU21D 0x40, bus 1
         self.dev.write(self.CMD_SOFT_RESET)  # Soft reset
-        time.sleep(.1)
+        time.sleep(.2)
 
     def ctemp(self, sensor_temp):
         t_sensor_temp = sensor_temp / 65536.0
@@ -100,7 +100,7 @@ class HTU21D(object):
     def read_humidity(self):
         temp_actual = self.read_temperature()  # For temperature coefficient compensation
         self.dev.write(self.CMD_READ_HUM_NOHOLD)  # Measure humidity
-        time.sleep(.1)
+        time.sleep(.2)
         data = self.dev.read(3)
         buf = array.array('B', data)
 
